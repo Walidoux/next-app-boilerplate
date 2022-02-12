@@ -1,0 +1,14 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-prettier-scss"
+  ],
+  "rules": {
+    "color-no-invalid-hex": true,
+    "property-no-vendor-prefix": null,
+    "comment-no-empty": null,
+    "comment-empty-line-before": "never",
+    "no-descending-specificity": null,
+    "custom-property-pattern": ["", {}]
+  }
+}
