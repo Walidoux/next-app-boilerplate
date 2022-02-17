@@ -1,3 +1,5 @@
+@import "variables";
+
 %content {
   position: absolute;
   content: "";
@@ -26,4 +28,12 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+%button {
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: $default-transition;
 }
