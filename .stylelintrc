@@ -6,6 +6,9 @@
     "stylelint-config-standard-scss",
     "stylelint-config-prettier-scss"
   ], "rules": {
-    "property-no-vendor-prefix": null
+    "property-no-vendor-prefix": null,
+    "comment-empty-line-before": "never",
+    "comment-no-empty": null,
+    "color-no-invalid-hex": true
   }
 }
