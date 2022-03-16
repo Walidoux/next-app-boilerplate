@@ -1,3 +1,5 @@
+@import "variables";
+
 @mixin display-flex($content: center, $items: center, $direction: row) {
   display: flex;
   justify-content: #{$content};
@@ -45,5 +47,11 @@
   @if $triangle-direction == left {
     border-left-width: 0;
     border-color: transparent $triangle-color transparent transparent;
+  }
+}
+
+@mixin breakpoint($query, $no-query: false) {
+  @include breakpoints.breakpoint($query, $no-query) {
+    @content;
   }
 }
