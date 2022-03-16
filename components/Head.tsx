@@ -2,15 +2,15 @@ import NextHead from "next/head";
 
 const Head: React.FC = () => {
   const data = {
-    title: "Project",
+    title: process.env.NEXT_PUBLIC_PROJECT_NAME,
+    description: process.env.NEXT_PUBLIC_PROJECT_DESCRIPTION,
     image: "/images/icons/64x64.png",
-    description: "Your website description here.",
     url: "https://urlwebsite.fr/",
   };
 
   return (
     <NextHead>
-      <title>Walid Korchi</title>
+      <title>{data.title}</title>
 
       <link rel="icon" type="image/png" href={data.image} />
       <link rel="apple-touch-icon" href={data.image} />
