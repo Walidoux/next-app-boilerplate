@@ -1,4 +1,4 @@
-@import "variables";
+@import 'variables';
 
 @mixin display-flex($content: center, $items: center, $direction: row) {
   display: flex;
@@ -8,7 +8,7 @@
 }
 
 @mixin element-invisible($enforce: true) {
-  $important: if($enforce, "!important", null);
+  $important: if($enforce, '!important', null);
 
   max-height: 0 #{$important};
   opacity: 0 #{$important};
@@ -17,7 +17,7 @@
 }
 
 @mixin element-invisible-off($value-visibility: 100px, $enforce: true) {
-  $important: if($enforce, "!important", null);
+  $important: if($enforce, '!important', null);
 
   max-height: #{$value-visibility} #{$important};
   opacity: 1 #{$important};
@@ -25,7 +25,7 @@
 }
 
 @mixin css-triangle($triangle-size, $triangle-color, $triangle-direction) {
-  content: "";
+  content: '';
   display: block;
   width: 0;
   height: 0;
