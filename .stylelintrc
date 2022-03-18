@@ -8,6 +8,14 @@
     "property-no-vendor-prefix": null,
     "comment-empty-line-before": "never",
     "comment-no-empty": null,
-    "color-no-invalid-hex": true
+    "color-no-invalid-hex": true,
+    "font-family-name-quotes": "always-where-required",
+    "max-empty-lines": 1,
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": ["export", "global"]
+      }
+    ]
   }
 }
