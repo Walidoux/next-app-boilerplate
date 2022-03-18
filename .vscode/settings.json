@@ -1,0 +1,11 @@
+{
+  "prettier.configPath": ".prettierrc",
+
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+
+  "stylelint.validate": ["css", "less", "postcss", "sass", "scss"],
+  "stylelint.snippet": ["css", "less", "postcss", "sass", "scss"]
+}
