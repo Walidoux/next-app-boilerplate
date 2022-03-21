@@ -6,6 +6,12 @@
     "source.fixAll": true
   },
 
+  "typescript.tsdk": "node_modules/typescript/lib",
+
   "stylelint.validate": ["css", "less", "postcss", "sass", "scss"],
-  "stylelint.snippet": ["css", "less", "postcss", "sass", "scss"]
+  "stylelint.snippet": ["css", "less", "postcss", "sass", "scss"],
+  "cssModules.camelCase": false,
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
