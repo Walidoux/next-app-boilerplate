@@ -1,12 +1,23 @@
+# ⬇️ Next.Js Boilerplate - Starter code
+
+⚙️ The Next.js 12.1.0 boilerplate starter code/time saver with Typescript / SCSS. Including linters such as: Prettier, Eslint and Stylelint.
+
+![Boilerplate](https://repository-images.githubusercontent.com/458642085/47fb4fd4-db09-43d5-be7b-1bdd4a7fe851)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Table of Contents
 
-First, run the development server:
+- [Preview](#preview)
+- [Getting Started](#getting-started)
+- [Other information](#other-information)
+
+### Getting Started
+
+First, run the development server either with `npm` or `yarn`, it depends on what you're using:
 
 ```bash
 npm run dev
-# or
 yarn dev
 ```
 
@@ -18,7 +29,7 @@ You can start editing the page by modifying `pages/index.tsx`. The page auto-upd
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
+### Learn More
 
 To learn more about Next.js, take a look at the following resources:
 
@@ -27,7 +38,7 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+### Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
