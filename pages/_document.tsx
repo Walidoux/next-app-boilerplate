@@ -1,10 +1,12 @@
-import Document, { Html, Main, Head, NextScript } from 'next/document'
+import Document, { Html, Main, NextScript } from 'next/document'
+
+import CommonHead from '@/components/Head/CommonHead'
 
 class MyDocument extends Document {
   render(): JSX.Element {
     return (
       <Html lang='en'>
-        <Head />
+        <CommonHead />
         <body>
           <Main />
           <NextScript />
