@@ -24,34 +24,74 @@
   visibility: visible #{$important};
 }
 
-@mixin css-triangle($triangle-size, $triangle-color, $triangle-direction) {
-  content: '';
-  display: block;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: $triangle-size;
+@mixin pseudo-element(
+  $element,
+  $el-height: 0,
+  $el-width: 0,
+  $isCentered: false,
+  $el-background: transparent,
+  $el-rotation: 0deg,
+  $el-transition: none,
+  $isVisible: true
+) {
+  @if $element == 'before' or $element == 'after' {
+    position: relative;
 
-  @if $triangle-direction == down {
-    border-bottom-width: 0;
-    border-color: $triangle-color transparent transparent;
-  }
-  @if $triangle-direction == up {
-    border-top-width: 0;
-    border-color: transparent transparent $triangle-color;
-  }
-  @if $triangle-direction == right {
-    border-right-width: 0;
-    border-color: transparent transparent transparent $triangle-color;
-  }
-  @if $triangle-direction == left {
-    border-left-width: 0;
-    border-color: transparent $triangle-color transparent transparent;
+    &:#{$element} {
+      @extend %content;
+
+      width: #{$el-width};
+      height: #{$el-height};
+      background: #{$el-background};
+      transition: #{$el-transition};
+      @content;
+
+      @if $isVisible {
+        @include element-invisible-off;
+      } @else {
+        @include element-invisible;
+      }
+
+      @if $isCentered {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(#{$el-rotation});
+      } @else {
+        transform: rotate(#{$el-rotation});
+        @content;
+      }
+    }
+  } @else {
+    @warn "`#{$el}` isn't a valid pseudo element";
   }
 }
 
-@mixin breakpoint($query, $no-query: false) {
-  @include breakpoints.breakpoint($query, $no-query) {
+@mixin css-triangle(
+  $pseudo,
+  $triangle-size,
+  $triangle-color,
+  $triangle-direction
+) {
+  @include pseudo-element(#{$pseudo}) {
+    border-style: solid;
+    border-width: $triangle-size;
     @content;
+
+    border-#{$triangle-direction}-width: 0;
+    border-color: if($triangle-direction == down, $triangle-color, transparent)
+      if($triangle-direction == left, $triangle-color, transparent)
+      if($triangle-direction == up, $triangle-color, transparent)
+      if($triangle-direction == right, $triangle-color, transparent);
+  }
+}
+
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @error "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
   }
 }
