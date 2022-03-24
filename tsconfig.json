@@ -17,7 +17,11 @@
     "resolveJsonModule": true,
     "moduleResolution": "node",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "@/components/*": ["components/*"],
+      "@/utils/*": ["utils/*"]
+    }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["dist", ".next", "out", "next.config.js"]
