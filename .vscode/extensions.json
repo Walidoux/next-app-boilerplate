@@ -3,6 +3,7 @@
     "EditorConfig.EditorConfig",
     "esbenp.prettier-vscode",
     "stylelint.vscode-stylelint",
-    "clinyong.vscode-css-modules"
+    "clinyong.vscode-css-modules",
+    "dbaeumer.vscode-eslint"
   ]
 }

@@ -9,7 +9,7 @@
     "comment-empty-line-before": "never",
     "comment-no-empty": null,
     "color-no-invalid-hex": true,
-    "font-family-name-quotes": "always-where-required",
+    "font-family-name-quotes": "always-where-recommended",
     "max-empty-lines": 1,
     "selector-pseudo-class-no-unknown": [
       true,
