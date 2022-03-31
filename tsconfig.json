@@ -17,10 +17,9 @@
     "resolveJsonModule": true,
     "moduleResolution": "node",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "plugins": [{ "name": "typescript-plugin-css-modules" }],
     "forceConsistentCasingInFileNames": true,
     "paths": {
-      "@/styles/": ["styles/pages/*"],
+      "@/styles/*": ["styles/pages/*"],
       "@/components/*": ["components/*"],
       "@/utils/*": ["utils/*"]
     }

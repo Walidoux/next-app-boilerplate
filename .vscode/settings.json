@@ -12,7 +12,6 @@
 
   "stylelint.validate": ["css", "less", "postcss", "sass", "scss"],
   "stylelint.snippet": ["css", "less", "postcss", "sass", "scss"],
-  "cssModules.camelCase": false,
   "scss.lint.float": "error",
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
