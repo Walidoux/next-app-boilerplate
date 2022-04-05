@@ -1,0 +1,12 @@
+@use '@fontsource/open-sans/scss/mixins' as OpenSans;
+
+@include OpenSans.fontFace($fontName: 'OpenSans-Regular', $weight: 400);
+@include OpenSans.fontFace($fontName: 'OpenSans-Bold', $weight: 600);
+
+%title {
+  font-family: OpenSans-Regular, sans-serif;
+}
+
+%sub-title {
+  font-family: OpenSans-Bold, sans-serif;
+}
