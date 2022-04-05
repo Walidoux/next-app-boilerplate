@@ -19,7 +19,6 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "forceConsistentCasingInFileNames": true,
     "paths": {
-      "@/styles/*": ["styles/pages/*"],
       "@/components/*": ["components/*"],
       "@/utils/*": ["utils/*"]
     }
