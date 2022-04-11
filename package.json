@@ -8,10 +8,12 @@
     "start": "next start",
     "lint:next": "next lint",
     "lint:scss": "stylelint \"**/*.scss\"",
-    "lint:prettier": "prettier \".\" --check"
+    "lint:prettier": "prettier \".\" --check",
+    "gen": "plop"
   },
   "dependencies": {
     "@fontsource/open-sans": "^4.5.8",
+    "classnames": "^2.3.1",
     "next": "^12.1.4",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
