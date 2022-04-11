@@ -1,0 +1,13 @@
+import classNames from 'classNames'
+
+import styles from './walidoux.module.scss'
+
+interface WalidouxProps {
+  className?: string
+}
+
+export const Walidoux: React.FC<WalidouxProps> = (props) => {
+  const { className } = props
+
+  return <div className={classNames(className, styles.container)}></div>
+}
