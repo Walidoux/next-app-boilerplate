@@ -6,7 +6,6 @@
   ],
   "rules": {
     "property-no-vendor-prefix": null,
-    "comment-empty-line-before": "never",
     "comment-no-empty": null,
     "color-no-invalid-hex": true,
     "font-family-name-quotes": "always-where-recommended",
