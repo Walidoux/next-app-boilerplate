@@ -1,9 +1,9 @@
 // eslint-disable-next-line @next/next/no-document-import-in-page
 import { Head } from 'next/document'
 
-import { projectConfig } from '@/utils/config'
+import { projectConfig } from 'utils/config'
 
-const CommonHead = (): JSX.Element => {
+export const CommonHead = (): JSX.Element => {
   return (
     <Head>
       {/* Link Tags */}
@@ -62,5 +62,3 @@ const CommonHead = (): JSX.Element => {
     </Head>
   )
 }
-
-export default CommonHead

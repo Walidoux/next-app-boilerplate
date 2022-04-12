@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import { projectConfig } from '@/utils/config'
+import { projectConfig } from 'utils/config'
 
 interface HeadProps {
   longName?: string
@@ -10,8 +10,7 @@ interface HeadProps {
 const NextHead: React.FC<HeadProps> = (props) => {
   const {
     longName = projectConfig.longName,
-    shortName = projectConfig.shortName,
-    children
+    shortName = projectConfig.shortName
   } = props
 
   return (
@@ -23,8 +22,6 @@ const NextHead: React.FC<HeadProps> = (props) => {
       </title>
 
       <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-
-      {children}
     </Head>
   )
 }
