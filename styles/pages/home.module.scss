@@ -42,8 +42,8 @@
 
   .video {
     position: fixed;
-    min-height: 100vh;
-    width: 100vw;
+    min-height: 200vh;
+    min-width: 100vw;
     z-index: -100;
   }
 }
