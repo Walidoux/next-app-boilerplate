@@ -1,4 +1,6 @@
 import type { NextPage } from 'next'
+import { GitHub } from 'react-feather'
+import Link from 'next/link'
 
 import Head from 'components/Head/NextHead'
 
@@ -9,8 +11,23 @@ const Home: NextPage = () => {
     <main className={styles.application}>
       <Head />
 
-      <p className={styles.message}>Hello Beautiful World of Coding !</p>
-      <span className={styles.message}>Some sort of tests</span>
+      <p className={styles.title}>
+        You feel a calming tranquility. <br />
+        <span className={styles.subtitle}>
+          You&apos;re filled with determination...
+        </span>
+      </p>
+      <Link href='https://github.com/Walidoux'>
+        <a className={styles['redirect-link']}>
+          <GitHub />
+          <span className={styles.text}>Walidoux&apos;s Github</span>
+        </a>
+      </Link>
+
+      <video autoPlay loop muted playsInline className={styles.video}>
+        <source src='/videos/Background.m4v' type='video/mp4; codecs=hvc1' />
+        <source src='/videos/Background.webm' type='video/webm; codecs=vp9' />
+      </video>
     </main>
   )
 }
