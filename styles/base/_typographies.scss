@@ -1,12 +1,32 @@
 @use '@fontsource/open-sans/scss/mixins' as OpenSans;
 
+@import 'helpers';
+
 @include OpenSans.fontFace($fontName: 'OpenSans-Regular', $weight: 400);
 @include OpenSans.fontFace($fontName: 'OpenSans-Bold', $weight: 600);
+@include OpenSans.fontFace($fontName: 'OpenSans-ExtraBold', $weight: 700);
 
-%title {
+%typo-title {
+  padding: 0 10px;
+  text-align: center;
+  font-size: 2.325rem;
+  line-height: 2.5rem;
+  color: hsla(0deg 100% 100% / 100%);
   font-family: OpenSans-Regular, sans-serif;
 }
 
-%sub-title {
-  font-family: OpenSans-Bold, sans-serif;
+%typo-subtitle {
+  padding: 0 10px;
+  text-align: center;
+  font-size: 1.325rem;
+  line-height: 2rem;
+  color: hsla(0deg 100% 100% / 90%);
+  font-family: OpenSans-Regular, sans-serif;
+}
+
+%typo-button {
+  @extend %input;
+
+  padding: 10px 20px;
+  font-family: OpenSans-ExtraBold, sans-serif;
 }
