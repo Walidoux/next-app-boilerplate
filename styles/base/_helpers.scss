@@ -1,13 +1,13 @@
 @import 'variables';
 
-%content {
+%no-content {
   position: absolute;
   content: '';
 }
 
 %container {
   max-width: 1280px;
-  margin: 0 auto;
+  margin-inline: auto;
   padding: 20px;
 }
 

@@ -6,7 +6,8 @@
 
   min-height: 100vh;
   max-width: 100vw;
-  background: hsla(0deg 0% 0% / 50%);
+  background: url('/images/Background.jpg') no-repeat;
+  background-size: cover;
 
   .title {
     @extend %typo-title;
