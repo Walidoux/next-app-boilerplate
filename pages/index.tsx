@@ -12,22 +12,17 @@ const Home: NextPage = () => {
       <Head />
 
       <p className={styles.title}>
-        You feel a calming tranquility. <br />
+        You feel a calming tranquility... <br />
         <span className={styles.subtitle}>
-          You&apos;re filled with determination...
+          You&apos;re filled with determination.
         </span>
       </p>
       <Link href='https://github.com/Walidoux'>
-        <a className={styles['redirect-link']}>
+        <a className={styles['redirect-link']} target='_blank'>
           <GitHub />
           <span className={styles.text}>Walidoux&apos;s Github</span>
         </a>
       </Link>
-
-      <video autoPlay loop muted playsInline className={styles.video}>
-        <source src='/videos/Background.m4v' type='video/mp4; codecs=hvc1' />
-        <source src='/videos/Background.webm' type='video/webm; codecs=vp9' />
-      </video>
     </main>
   )
 }
