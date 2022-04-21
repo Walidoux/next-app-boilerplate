@@ -1,12 +1,12 @@
 import classNames from 'classNames'
 
-import styles from './walidoux.module.scss'
+import styles from './{{ properCase name }}.module.scss'
 
-interface WalidouxProps {
+interface {{ properCase name }}Props {
   className?: string
 }
 
-export const Walidoux: React.FC<WalidouxProps> = (props) => {
+export const {{ properCase name }}: React.FC<{{ properCase name }}Props> = (props) => {
   const { className } = props
 
   return <div className={classNames(className, styles.container)}></div>
