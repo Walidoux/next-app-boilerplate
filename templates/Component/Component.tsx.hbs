@@ -4,10 +4,11 @@ import styles from './{{ properCase name }}.module.scss'
 
 interface {{ properCase name }}Props {
   className?: string
+  children?: React.ReactNode
 }
 
 export const {{ properCase name }}: React.FC<{{ properCase name }}Props> = (props) => {
-  const { className } = props
+  const { className, children } = props
 
-  return <div className={classNames(className, styles.container)}></div>
+  return <div className={classNames(className, styles.container)}>{children}</div>
 }
