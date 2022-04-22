@@ -39,7 +39,7 @@
     position: relative;
 
     &:#{$element} {
-      @extend %content;
+      @extend %no-content;
 
       width: #{$el-width};
       height: #{$el-height};
