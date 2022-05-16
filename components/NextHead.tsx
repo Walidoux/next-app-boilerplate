@@ -1,12 +1,20 @@
-// eslint-disable-next-line @next/next/no-document-import-in-page
-import { Head } from 'next/document'
+import Head from 'next/head'
+import useTranslation from 'next-translate/useTranslation'
 
 import { projectConfig } from 'utils/config'
 
-export const CommonHead = (): JSX.Element => {
+interface HeadProps {
+  title?: string
+}
+
+const NextHead: React.FC<HeadProps> = (props) => {
+  const { title = projectConfig.shortName } = props
+
+  const { lang } = useTranslation()
+
   return (
     <Head>
-      {/* Link Tags */}
+      <title>{title}</title>
 
       <link
         rel='shortcut icon'
@@ -33,8 +41,9 @@ export const CommonHead = (): JSX.Element => {
 
       {/* Default meta tags */}
 
+      <meta name='viewport' content='width=device-width, initial-scale=1.0' />
       <meta name='description' content={projectConfig.description} />
-      <meta name='Language' content='en' />
+      <meta name='language' content={lang} />
       <meta name='theme-color' content={projectConfig.color} />
       <meta name='copyright' content={projectConfig.shortName} />
       <meta name='author' content={projectConfig.shortName} />
@@ -51,7 +60,10 @@ export const CommonHead = (): JSX.Element => {
       <meta property='og:url' content={projectConfig.url} />
       <meta property='og:image' content={projectConfig.icons.image} />
       <meta property='og:description' content={projectConfig.description} />
-      <meta property='og:locale' content='en_US' />
+      <meta
+        property='og:locale'
+        content={`${lang as string}_${lang.toUpperCase() as string}`}
+      />
       <meta property='og:site_name' content={projectConfig.longName} />
 
       {/* Twitter card Metadata */}
@@ -62,3 +74,5 @@ export const CommonHead = (): JSX.Element => {
     </Head>
   )
 }
+
+export default NextHead
