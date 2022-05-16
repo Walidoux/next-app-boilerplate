@@ -1,9 +1,9 @@
-// @ts-check
-
 const path = require('path')
 
+const nextTranslate = require('next-translate')
+
 /** @type {import('next').NextConfig} */
-module.exports = {
+const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   sassOptions: {
@@ -13,3 +13,5 @@ module.exports = {
     ]
   }
 }
+
+module.exports = nextTranslate(nextConfig)
