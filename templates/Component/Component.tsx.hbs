@@ -1,14 +1,17 @@
-import classNames from 'classNames'
+import classNames from 'classnames'
 
 import styles from './{{ properCase name }}.module.scss'
 
 interface {{ properCase name }}Props {
   className?: string
-  children?: React.ReactNode
+  children?: string
 }
 
-export const {{ properCase name }}: React.FC<{{ properCase name }}Props> = (props) => {
-  const { className, children } = props
-
-  return <div className={classNames(className, styles.container)}>{children}</div>
+export const {{ properCase name }}: React.FC<{{ properCase name }}Props> = ({
+  className,
+  children
+}) => {
+  return (
+    <div className={classNames(className, styles.container)}>{children}</div>
+  )
 }
