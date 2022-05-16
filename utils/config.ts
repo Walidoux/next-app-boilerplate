@@ -6,6 +6,7 @@ export const projectConfig: PCDefaultValues = {
   description:
     'The latest Next.js boilerplate starter code/time saver with Typescript / SCSS. Including linters such as: Prettier, Eslint and Stylelint.',
   url: 'Unknown project url',
+  defaultLocale: 'en',
   color: '#775aaa',
   icons: {
     image: '/images/Logo.png',

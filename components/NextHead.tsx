@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import useTranslation from 'next-translate/useTranslation'
 
 import { projectConfig } from 'utils/config'
 
@@ -9,8 +8,6 @@ interface HeadProps {
 
 const NextHead: React.FC<HeadProps> = (props) => {
   const { title = projectConfig.shortName } = props
-
-  const { lang } = useTranslation()
 
   return (
     <Head>
@@ -43,7 +40,7 @@ const NextHead: React.FC<HeadProps> = (props) => {
 
       <meta name='viewport' content='width=device-width, initial-scale=1.0' />
       <meta name='description' content={projectConfig.description} />
-      <meta name='language' content={lang} />
+      <meta name='language' content={projectConfig.defaultLocale} />
       <meta name='theme-color' content={projectConfig.color} />
       <meta name='copyright' content={projectConfig.shortName} />
       <meta name='author' content={projectConfig.shortName} />
@@ -62,7 +59,9 @@ const NextHead: React.FC<HeadProps> = (props) => {
       <meta property='og:description' content={projectConfig.description} />
       <meta
         property='og:locale'
-        content={`${lang as string}_${lang.toUpperCase() as string}`}
+        content={`${
+          projectConfig.defaultLocale
+        }_${projectConfig.defaultLocale.toUpperCase()}`}
       />
       <meta property='og:site_name' content={projectConfig.longName} />
 
