@@ -1,0 +1,55 @@
+@import 'mixins';
+@import 'typographies';
+
+.application {
+  @include display-flex(center, center, column);
+
+  min-height: 100vh;
+  max-width: 100vw;
+  background: linear-gradient(
+      to top,
+      rgb(0 0 0 / 75%) 0%,
+      rgb(0 0 0 / 75%) 100%
+    ),
+    url('/images/Background.jpg') no-repeat;
+  background-size: cover;
+
+  .title {
+    @extend %typo-title;
+  }
+
+  .subtitle {
+    @extend %typo-subtitle;
+  }
+
+  :where(.title, .subtitle) {
+    font-style: italic;
+  }
+
+  .redirect-link {
+    @include display-flex(center, center, row);
+    @extend %typo-button;
+
+    text-decoration: none;
+    color: hsla(0deg 0% 0% / 100%);
+    background: hsla(0deg 100% 100% / 100%);
+    border-radius: 8px;
+    margin-top: 30px;
+
+    &:hover {
+      color: hsla(0deg 100% 100% / 100%);
+      background: hsla(0deg 0% 0% / 100%);
+    }
+
+    .text {
+      margin-left: 10px;
+    }
+  }
+
+  .video {
+    position: fixed;
+    min-height: 200vh;
+    min-width: 100vw;
+    z-index: -100;
+  }
+}

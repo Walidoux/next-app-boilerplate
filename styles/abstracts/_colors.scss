@@ -1,0 +1,14 @@
+$colors: (
+  primary: (
+    400: hsla(0deg 0% 100% / 100%),
+    600: hsla(0deg 0% 85% / 100%)
+  ),
+  secondary: (
+    400: hsla(0deg 0% 0% / 100%),
+    600: hsla(0deg 0% 15% / 100%)
+  ),
+  output: (
+    error: hsla(0deg 75% 55% / 100%),
+    success: hsla(126deg 49% 42% / 100%)
+  )
+);
