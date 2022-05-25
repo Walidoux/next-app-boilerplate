@@ -6,13 +6,7 @@
 
   min-height: 100vh;
   max-width: 100vw;
-  background: linear-gradient(
-      to top,
-      rgb(0 0 0 / 75%) 0%,
-      rgb(0 0 0 / 75%) 100%
-    ),
-    url('/images/Background.jpg') no-repeat;
-  background-size: cover;
+  background: linear-gradient(180deg, #775aaa, #393ecc);
 
   .title {
     @extend %typo-title;
