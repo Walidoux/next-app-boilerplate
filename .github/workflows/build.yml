@@ -20,7 +20,7 @@ jobs:
           node-version: 16.x
 
       - name: Install packages
-        run: npm ci
+        run: yarn --frozen-lockfile
 
       - name: Build project
-        run: npm run build
+        run: yarn build

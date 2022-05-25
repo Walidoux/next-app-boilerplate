@@ -20,16 +20,16 @@ jobs:
           node-version: 16.x
 
       - name: Install packages
-        run: npm ci
+        run: yarn --frozen-lockfile
 
-      - name: lint:commit
-        run: npm run lint:commit -- --to "${{ github.sha }}"
+      - name: Commit linting
+        run: yarn lint:commit -- --to '${{ github.sha }}'
 
       - name: Next.js linting
-        run: npm run lint:next
+        run: yarn lint:next
 
       - name: Prettier linting
-        run: npm run lint:prettier
+        run: yarn lint:prettier
 
       - name: Stylelint linting
-        run: npm run lint:scss
+        run: yarn lint:scss

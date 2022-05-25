@@ -19,10 +19,10 @@ jobs:
           node-version: 16.x
 
       - name: Install packages
-        run: npm ci
+        run: yarn --frozen-lockfile
 
       - name: Release project
-        run: npm run release
+        run: yarn release
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
